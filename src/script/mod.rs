@@ -68,6 +68,7 @@
 //! [testsuite]: https://github.com/WebAssembly/testsuite
 //! [wasmi]: https://github.com/pepyakin/wasmi
 
+use std::prelude::v1::*;
 use std::io;
 use std::vec;
 use std::str;
@@ -78,7 +79,8 @@ use std::ffi::CString;
 
 use serde_json;
 
-use super::{Error as WabtError, Script, WabtWriteScriptResult, WabtBuf};
+//use super::{Error as WabtError, Script, WabtWriteScriptResult, WabtBuf};
+use super::{Error as WabtError };
 
 mod json;
 
@@ -213,7 +215,7 @@ pub enum Action<F32 = f32, F64 = f64> {
         field: String,
     },
 }
-
+/*
 fn parse_value<F32: FromBits<u32>, F64: FromBits<u64>>(
     test_val: &json::RuntimeValue
 ) -> Result<Value<F32, F64>, Error> {
@@ -599,3 +601,4 @@ impl<F32: FromBits<u32>, F64: FromBits<u64>> ScriptParser<F32, F64> {
         Ok(Some(Command { line, kind }))
     }
 }
+*/
