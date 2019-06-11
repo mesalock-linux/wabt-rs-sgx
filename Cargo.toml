@@ -26,5 +26,4 @@ mesalock_sgx = [
 
 std = [
   "serde/std",
-  "serde_json/std"
 ]
